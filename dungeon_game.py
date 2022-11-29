@@ -1,12 +1,24 @@
 class Character:
-    def __init__(self, name, player_class, race, level):
+    def __init__(self, name, player_class, race, level, hit_points):
         self.name = name
         self.player_class = player_class
         self.race = race
         self.level = level
+        self.hit_points = hit_points
 
     def __repr__(self):
         return f'{self.name} is a level {self.level}, {self.race}, {self.player_class}.'
+
+    def announce(self):
+        print(
+            f'Hello there my name is {self.name}, and I am a level {self.level} {self.player_class}')
+
+    def level_up(self):
+        self.level += 1
+
+    def adjust_hp(self, hp_amount):
+        self.hit_points += hp_amount
+        print(f'{self.name}\'s hit points are now {self.hit_points}')
 
 
 class Attribute:
