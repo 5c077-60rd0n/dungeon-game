@@ -9,8 +9,6 @@ class Character:
         return f'{self.name} is a level {self.level}, {self.race}, {self.player_class}.'
 
 
-
-
 class Attribute:
     def __init__(self, strength, dexterity, constitution, intelligence, wisdom, charisma):
         self.strength = strength
@@ -25,26 +23,37 @@ class Attribute:
 
     def increase_strength(self):
         self.strength += 1
+
     def decrease_strength(self):
         self.strength -= 1
+
     def increase_dexterity(self):
         self.dexterity += 1
+
     def decrease_dexterity(self):
         self.dexterity -= 1
+
     def increase_constitution(self):
         self.constitution += 1
+
     def decrease_constitution(self):
         self.constitution -= 1
+
     def increase_intelligence(self):
         self.intelligence += 1
+
     def decrease_intelligence(self):
         self.intelligence -= 1
+
     def increase_wisdom(self):
         self.wisdom += 1
+
     def decrease_wisdom(self):
         self.wisdom -= 1
+
     def increase_charisma(self):
         self.charisma += 1
+
     def decrease_charisma(self):
         self.charisma -= 1
 
