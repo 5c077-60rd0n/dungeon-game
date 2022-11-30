@@ -1,6 +1,5 @@
 
 
-
 class Attribute:
     def __init__(self, strength, dexterity, constitution, intelligence, wisdom, charisma):
         self.strength = strength
@@ -49,6 +48,7 @@ class Attribute:
     def decrease_charisma(self):
         self.charisma -= 1
 
+
 class Character:
     def __init__(self, name, player_class, race, level, hit_points):
         self.name = name
@@ -57,7 +57,8 @@ class Character:
         self.level = level
         self.hit_points = hit_points
         # OOP Composition character class HAS attributes
-        self.char_attributes = Attribute(strength=9, dexterity=9,constitution=9, intelligence=9, wisdom=9, charisma=9)
+        self.char_attributes = Attribute(
+            strength=9, dexterity=9, constitution=9, intelligence=9, wisdom=9, charisma=9)
 
     def __repr__(self):
         return f'{self.name} is a level {self.level}, {self.race}, {self.player_class}.'
@@ -73,9 +74,11 @@ class Character:
         self.hit_points += hp_amount
         print(f'{self.name}\'s hit points are now {self.hit_points}')
 
+
 class Paladin(Character):
     def __init__(self, name, race, level, hit_points, player_class='Paladin'):
         super().__init__(name, player_class, race, level, hit_points)
+
 
 character1 = Character('Nordak', 'Paladin', 'Human', 20, 500)
 print(character1)
